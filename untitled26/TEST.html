@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style>
+       .bg {
+           background: url("55.jpg");
+           background-repeat: no-repeat;
+           background-position: bottom;
+           background-size: cover;
+           height: 100vh;
+       }
+        h1 {
+            margin: 0;
+            color: orange;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg" >
+<center>
+    <h1>ПК БОЯРИН</h1>
+</center>
+<form>
+ <p>Последня серия видеокарт NVIDIA?</p>
+    <input type="radio" name="first_question" value="1 "id="1">RTX<br>
+    <input type="radio" name="first_question" value="2" id="2">GTX<br>
+    <input type="radio" name="first_question" value="3" id="3">FX<br>
+    <input type="radio" name="first_question" value="4" id="4">GT<br>
+
+     <p>Король Бюджетников среди AMD?</p>
+    <input type="radio" name="second_question" value="5" id="5">R5 1600<br>
+    <input type="radio" name="second_question" value="6" id="6">R5 2600<br>
+    <input type="radio" name="second_question" value="7" id="7">R5 3600<br>
+    <input type="radio" name="second_question" value="8" id="8">R5 4600<br>
+
+     <p>AORUS GTX 1080 Ti быстрее? AORUS RTX 2060 SUPER </p>
+    <input type="radio" name="third_question" value="9" id="9">ДА<br>
+    <input type="radio" name="third_question" value="10" id="10">ко ко нет 2060 super быстрее 1080ti <br>
+    <input type="radio" name="third_question" value="11" id="11">незнаю<br>
+    <input type="radio" name="third_question" value="12" id="12">нет <br>
+
+     <p>Кто лучше всех рабирается в схематехнике блоков питания?</p>
+    <input type="radio" name="fourth_question" value="13" id="13">Ностальжи ПК<br>
+    <input type="radio" name="fourth_question" value="14" id="14">Maddy MURK<br>
+    <input type="radio" name="fourth_question" value="15" id="15">Nitroxsenys<br>
+    <input type="radio" name="fourth_question" value="16" id="16">Green Paper<br>
+</form>
+<button onclick="check()">check</button>
+ <p id="correct"></p>
+ <p id="incorrect"></p>
+</body>
+<script type="text/javascript">
+    correct=0
+    incorrect=4
+
+    function check() {
+        if (document.getElementById('1').checked){
+            correct++
+            incorrect--
+        }
+         if (document.getElementById('5').checked){
+            correct++
+            incorrect--
+        }
+         if (document.getElementById('9').checked){
+            correct++
+            incorrect--
+        }
+         if (document.getElementById('15').checked){
+            correct++
+            incorrect--
+        }
+        document.getElementById('correct').innerHTML="Correct: " + correct
+        document.getElementById('incorrect').innerHTML="Inorrect: " + incorrect
+    }
+</script>
+</html>
